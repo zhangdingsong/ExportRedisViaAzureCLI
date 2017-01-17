@@ -28,10 +28,10 @@ Representational State Transfer (REST) APIs are service endpoints that support s
 
 ## Prerequisites
 
-***1. Azure Account***
+***1. Azure Account***<br/>
 You need an Azure account. You can [open a free Azure account](https://azure.microsoft.com/pricing/free-trial/?WT.mc_id=A261C142F) or [Activate Visual Studio subscriber benefits](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A261C142F).
 
-***2. Azure CLI 2.0 (Preview)***
+***2. Azure CLI 2.0 (Preview)***<br/>
 [Install Azure CLI 2.0 (Preview)](https://docs.microsoft.com/en-us/cli/azure/install-az-cli2) on whatever platform you use. Azure CLI 2.0 is in preview and it works only with the resource manager deployment model. You can also install Azure CLI, which is released and works with all services.
 
 ## Detailed Steps
@@ -66,18 +66,18 @@ Example:
 Error: Report SAS URIs poorly formatted.
 <img src="https://github.com/zhangdingsong/ExportRedisViaAzureCLI/raw/master/SASError_Ink_LI.jpg">
 
-The root cause of this issue: 
-1. colon mark ":" need to escaped before use here as an parameter. You can see the only difference is escaped charactor.
-	 * Azure Portal generated SAS token
+The root cause of this issue: <br/>
+1. colon mark ":" need to escaped before use here as an parameter. You can see the only difference is escaped charactor.<br/>
+ * Azure Portal generated SAS token<br/>
 ```shell
      sv=2015-12-11&ss=bfqt&srt=sco&sp=rwdlacup&se=2017-05-31T21:51:24Z&st=2017-01-09T13:51:24Z&spr=https,http&sig=llWaJ2TtAJWIhpm3j7PKead8%2BuHXp1IRUs4G%2B5dYcsQ%3D
 ```
-     
-     * Azure Storage Explorer generated SAS token
+     <br/>
+ * Azure Storage Explorer generated SAS token<br/>
 ```shell
      st=2017-01-09T06%3A22%3A00Z&se=2017-01-20T06%3A22%3A00Z&sp=rwdl&sv=2015-04-05&sr=c&sig=GUuS3DZzZufB4y8OJR8%2FIrcSxbIZle10gEMqrhNMNsA%3D
 ```
-2. long parameter should cupping by double quotation marks.
+2. long parameter should cupping by double quotation marks.<br/>
 
 ## Reference
 Below are some useful links, you will need them before your real action.<br/><br/>
